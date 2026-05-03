@@ -217,7 +217,7 @@ footer{background:#060e1c;color:rgba(255,255,255,0.55);padding:48px 5% 24px;}
   <a id="mn-services">Services</a>
   <a id="mn-certifications">Certifications</a>
   <a id="mn-why">Why Us</a>
-  <a id="mn-stats">Work Orders</a>
+
   <a id="mn-gallery">Gallery</a>
   <a id="mn-contact">Contact</a>
 </div>
@@ -255,7 +255,7 @@ footer{background:#060e1c;color:rgba(255,255,255,0.55);padding:48px 5% 24px;}
     <li><a id="lnk-services">Services</a></li>
     <li><a id="lnk-certifications">Certifications</a></li>
     <li><a id="lnk-why">Why Us</a></li>
-    <li><a id="lnk-stats">Work Orders</a></li>
+
     <li><a id="lnk-gallery">Gallery</a></li>
     <li><a id="lnk-contact">Contact</a></li>
   </ul>
@@ -440,7 +440,7 @@ footer{background:#060e1c;color:rgba(255,255,255,0.55);padding:48px 5% 24px;}
         <div style="margin-top:14px;"><button class="btn-gold" id="why-contact-btn">Request Our Services &#8594;</button></div>
       </div>
       <div class="clients-panel">
-        <h3>&#127963; All 14 Organisations We Have Served</h3>
+        <h3>&#127963; List Of Organisations We Have Served</h3>
         <div class="client-row" data-client="of_ambernath"><div class="cdot"></div><div class="cname">Indian Ordnance Factory, Ambernath</div><div class="ctype">Defence</div></div>
         <div class="client-row" data-client="mtpf"><div class="cdot"></div><div class="cname">Machine Tool Prototype Factory</div><div class="ctype">Defence</div></div>
         <div class="client-row" data-client="mmtc"><div class="cdot"></div><div class="cname">MMTC Ltd</div><div class="ctype">Central PSU</div></div>
@@ -458,57 +458,19 @@ footer{background:#060e1c;color:rgba(255,255,255,0.55);padding:48px 5% 24px;}
         <div style="margin-top:12px;text-align:center;"><button class="btn-gold" id="clients-contact-btn">Become Our Client &#8594;</button></div>
       </div>
     </div>
-  </section>
-</div>
-
-<!-- ===== WORK ORDERS / STATS ===== -->
-<div class="page" id="page-stats">
-  <section style="background:var(--cream);padding-top:110px;">
-    <div class="sec-lbl">Work Orders 2012 &#8211; 2026</div>
-    <h2 class="sec-title">Our <em>Performance at a Glance</em></h2>
-    <p class="sec-sub">Aggregated data from 30 work orders across 14 government organisations since 2012. All values are actuals from signed contracts.</p>
-    <div class="kpi-row">
-      <div class="kpi"><div class="knum">&#8377;15.6Cr+</div><div class="klbl">Total Contract Value</div></div>
-      <div class="kpi"><div class="knum">30+</div><div class="klbl">Work Orders Completed</div></div>
-      <div class="kpi"><div class="knum">1000+</div><div class="klbl">Resources Deployed</div></div>
-      <div class="kpi"><div class="knum">14</div><div class="klbl">Organisations Served</div></div>
-    </div>
-    <div class="chart-grid">
-      <div class="chart-card full">
-        <h3>Organisation-wise Contract Value (&#8377; Cr)</h3>
-        <p>Total value of all work orders awarded by each organisation to Vishal Super Services</p>
-        <div class="chart-wrap" style="height:340px;"><canvas id="chartOrgVal"></canvas></div>
+    <div style="margin-top:48px;">
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h3>Resources Deployed per Organisation</h3>
+          <p>Total human resources (headcount) deployed at each client organisation</p>
+          <div class="chart-wrap" style="height:360px;"><canvas id="chartResources"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>Work Type Distribution</h3>
+          <p>Breakdown of contracts by service category across all years</p>
+          <div class="chart-wrap" style="height:360px;"><canvas id="chartPie"></canvas></div>
+        </div>
       </div>
-      <div class="chart-card full">
-        <h3>Year-wise Revenue (&#8377; Cr)</h3>
-        <p>Cumulative contract value grouped by the start year of each work order</p>
-        <div class="chart-wrap" style="height:300px;"><canvas id="chartYearRev"></canvas></div>
-      </div>
-      <div class="chart-card">
-        <h3>Resources Deployed per Organisation</h3>
-        <p>Total human resources (headcount) deployed at each client organisation</p>
-        <div class="chart-wrap" style="height:360px;"><canvas id="chartResources"></canvas></div>
-      </div>
-      <div class="chart-card">
-        <h3>Work Type Distribution</h3>
-        <p>Breakdown of contracts by service category across all years</p>
-        <div class="chart-wrap" style="height:360px;"><canvas id="chartPie"></canvas></div>
-      </div>
-    </div>
-    <div style="background:var(--white);border-radius:14px;border:1px solid var(--border);overflow:auto;margin-top:8px;">
-      <table style="width:100%;border-collapse:collapse;font-size:13px;">
-        <thead style="background:var(--navy);color:var(--white);">
-          <tr>
-            <th style="padding:14px 16px;text-align:left;">#</th>
-            <th style="padding:14px 16px;text-align:left;">Organisation</th>
-            <th style="padding:14px 16px;text-align:left;">Work / Service</th>
-            <th style="padding:14px 16px;text-align:left;">Period</th>
-            <th style="padding:14px 16px;text-align:right;">Staff</th>
-            <th style="padding:14px 16px;text-align:right;">Value (&#8377;)</th>
-          </tr>
-        </thead>
-        <tbody id="workTable"></tbody>
-      </table>
     </div>
   </section>
 </div>
@@ -599,7 +561,7 @@ footer{background:#060e1c;color:rgba(255,255,255,0.55);padding:48px 5% 24px;}
       <ul>
         <li><a data-page="about">About Us</a></li>
         <li><a data-page="certifications">Certifications</a></li>
-        <li><a data-page="stats">Work Orders</a></li>
+        <li><a data-page="why">Work Orders</a></li>
         <li><a data-page="gallery">Gallery</a></li>
         <li><a data-page="contact">Contact Us</a></li>
       </ul>
@@ -653,7 +615,7 @@ function showPage(p){
   var lk=document.getElementById('lnk-'+p);if(lk)lk.classList.add('active');
   window.scrollTo(0,0);
   setTimeout(triggerFade,100);
-  if(p==='stats')setTimeout(buildCharts,200);
+  if(p==='why')setTimeout(buildCharts,200);
 }
 function triggerFade(){document.querySelectorAll('.page.active .fade').forEach(function(el){el.classList.add('in');});}
 triggerFade();
@@ -716,14 +678,8 @@ function buildCharts(){
   var gold='rgba(201,146,42,0.85)',goldB='rgba(201,146,42,1)',navy='rgba(13,31,60,0.85)';
   var colors=['#c9922a','#1a4a7a','#2d8a4e','#8b2d82','#c73b2a','#2a7fc9','#8a6d2d','#2ac9a0','#c92a6d','#6dc92a','#2ac96d','#6a2ac9'];
 
-  // Org value bar
-  new Chart(document.getElementById('chartOrgVal'),{type:'bar',data:{labels:ORG_LABELS,datasets:[{label:'Contract Value (Cr)',data:ORG_VALUES,backgroundColor:colors,borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return ' Rs. '+c.raw+' Cr';}}}},scales:{y:{beginAtZero:true,ticks:{callback:function(v){return 'Rs.'+v+'Cr';}},grid:{color:'rgba(0,0,0,0.05)'}},x:{ticks:{maxRotation:30,font:{size:11}},grid:{display:false}}}}});
-
-  // Year revenue line
-  new Chart(document.getElementById('chartYearRev'),{type:'line',data:{labels:YR_LABELS,datasets:[{label:'Revenue (Cr)',data:YR_VALUES,borderColor:goldB,backgroundColor:'rgba(201,146,42,0.1)',borderWidth:3,pointBackgroundColor:goldB,pointRadius:6,fill:true,tension:0.3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return ' Rs. '+c.raw+' Cr';}}}},scales:{y:{beginAtZero:true,ticks:{callback:function(v){return 'Rs.'+v+'Cr';}},grid:{color:'rgba(0,0,0,0.05)'}},x:{grid:{display:false}}}}});
-
   // Resources horizontal bar
-  new Chart(document.getElementById('chartResources'),{type:'bar',data:{labels:ORG_LABELS,datasets:[{label:'Staff Deployed',data:ORG_RESOURCES,backgroundColor:navy,borderRadius:5}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return ' '+c.raw+' staff';}}},},scales:{x:{beginAtZero:true,grid:{color:'rgba(0,0,0,0.05)'}},y:{ticks:{font:{size:11}},grid:{display:false}}}}});
+  new Chart(document.getElementById('chartResources'),{type:'bar',data:{labels:ORG_LABELS,datasets:[{label:'Staff Deployed',data:ORG_RESOURCES,backgroundColor:colors,borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return ' '+c.raw+' staff';}}}},scales:{y:{beginAtZero:true,grid:{color:'rgba(0,0,0,0.05)'},ticks:{stepSize:5}},x:{ticks:{maxRotation:30,font:{size:11}},grid:{display:false}}}}});
 
   // Pie - work type
   var types={};
@@ -731,19 +687,6 @@ function buildCharts(){
   var tLabels=Object.keys(types);var tVals=tLabels.map(function(k){return Math.round(types[k]/100000*10)/10;});
   new Chart(document.getElementById('chartPie'),{type:'doughnut',data:{labels:tLabels,datasets:[{data:tVals,backgroundColor:colors,borderWidth:2,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:11},padding:12}},tooltip:{callbacks:{label:function(c){return ' Rs.'+c.raw+'L';}}}}}});
 
-  // Table
-  var tb=document.getElementById('workTable');
-  WORK_ROWS.forEach(function(r,i){
-    var tr=document.createElement('tr');
-    tr.style.background=i%2===0?'#ffffff':'#faf7f2';
-    tr.innerHTML='<td style="padding:11px 16px;color:#6b7280;">'+r[0]+'</td>'+
-      '<td style="padding:11px 16px;font-weight:600;">'+r[1]+'</td>'+
-      '<td style="padding:11px 16px;">'+r[2]+'</td>'+
-      '<td style="padding:11px 16px;color:#6b7280;">'+r[3]+'</td>'+
-      '<td style="padding:11px 16px;text-align:right;">'+r[4]+'</td>'+
-      '<td style="padding:11px 16px;text-align:right;font-weight:600;color:#0d1f3c;">Rs.'+r[5].toLocaleString('en-IN')+'</td>';
-    tb.appendChild(tr);
-  });
 }
 
 function submitForm(){
@@ -805,7 +748,7 @@ window.addEventListener('DOMContentLoaded',function(){
   });
 
   // Nav links
-  var pages=['home','about','services','certifications','why','stats','gallery','contact'];
+  var pages=['home','about','services','certifications','why','gallery','contact'];
   pages.forEach(function(p){
     var el=document.getElementById('lnk-'+p);
     if(el)el.addEventListener('click',function(){showPage(p);});
